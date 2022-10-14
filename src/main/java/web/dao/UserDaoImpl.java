@@ -42,8 +42,6 @@ public class UserDaoImpl implements UserDao{
         userToBeUpdated.setName(user.getName());
         userToBeUpdated.setSurname(user.getSurname());
         userToBeUpdated.setEmail(user.getEmail());
-        entityManager.persist(userToBeUpdated);
-        entityManager.flush();
     }
 
     @Override
