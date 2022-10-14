@@ -6,10 +6,21 @@
 </head>
 <body>
 
-<p th:text="${user.getId()}">VALUE</p>
-<p th:text="${user.getName()}">VALUE</p>
-<p th:text="${user.getSurname()}">VALUE</p>
-<p th:text="${user.getEmail()}">VALUE</p>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Surname</th>
+            <th>Email</th>
+        </tr>
+        <tr>
+            <td th:text="${user.getId()}"></td>
+            <td th:text="${user.getName()}"></td>
+            <td th:text="${user.getSurname()}"></td>
+            <td th:text="${user.getEmail()}"></td>
+        </tr>
+    </table>
+
 
 <a th:href="@{/users/{id}/edit(id=${user.getId()})}">Edit</a>
 
